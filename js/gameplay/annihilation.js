@@ -1,4 +1,5 @@
 const anhBaseReq = 18;
+if(player.annihilation.energy.plus(tmp.anh.gain).gte(1e14))anhBaseReq = 1e100;
 const anhReqDiv = 3;
 
 function playerAnnihilationData() { return {
