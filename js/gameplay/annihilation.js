@@ -39,20 +39,20 @@ function annihilate(force=false, auto=false) {
             if(!confirm("Are you sure you wish to do this? This will reset all previous progress!"))return;
             player.annihilation.reached = true54
         }
-        if(player.annihilation.energy.plus(tmp.anh.gain).gte(1e14)) alert("Due to challenge, you can't get more than 1e14 annihilation energy.")
-   if(!player.annihilation.energy.plus(tmp.anh.gain).gte(1e14))     player.annihilation.energy = player.annihilation.energy.plus(tmp.anh.gain);
-   if(!player.annihilation.energy.plus(tmp.anh.gain).gte(1e14))      player.annihilation.total = player.annihilation.total.plus(tmp.anh.gain);
+        if(player.annihilation.total.plus(tmp.anh.gain).gte(1e14))  alert("Due to challenge, you can't get more than 1e14 annihilation energy.")
+   if(!player.annihilation.total.plus(tmp.anh.gain).gte(1e14))     player.annihilation.energy = player.annihilation.energy.plus(tmp.anh.gain);
+   if(!player.annihilation.total.plus(tmp.anh.gain).gte(1e14))      player.annihilation.total = player.annihilation.total.plus(tmp.anh.gain);
     }
 
-    if(!player.annihilation.energy.plus(tmp.anh.gain).gte(1e14))  player.size = new Decimal(1)
-    if(!player.annihilation.energy.plus(tmp.anh.gain).gte(1e14)) player.time = new Decimal(0)
-    if(!player.annihilation.energy.plus(tmp.anh.gain).gte(1e14)) player.depth = new Decimal(0)
-    if(!player.annihilation.energy.plus(tmp.anh.gain).gte(1e14)) player.essence = new Decimal(0)
-    if(!player.annihilation.energy.plus(tmp.anh.gain).gte(1e14)) player.spentEssence = new Decimal(0)
-    if(!player.annihilation.energy.plus(tmp.anh.gain).gte(1e14)) player.upgsUnl = hasAnhUpg(13)
-    if(!player.annihilation.energy.plus(tmp.anh.gain).gte(1e14)) player.upgs = {}
-    if(!player.annihilation.energy.plus(tmp.anh.gain).gte(1e14)) layer.quarks = playerQuarksData(false)
-    if(!player.annihilation.energy.plus(tmp.anh.gain).gte(1e14))  player.hadrons = playerHadronsData(false)
+    if(!player.annihilation.total.plus(tmp.anh.gain).gte(1e14))   player.size = new Decimal(1)
+    if(!player.annihilation.total.plus(tmp.anh.gain).gte(1e14))  player.time = new Decimal(0)
+    if(!player.annihilation.total.plus(tmp.anh.gain).gte(1e14))  player.depth = new Decimal(0)
+    if(!player.annihilation.total.plus(tmp.anh.gain).gte(1e14))  player.essence = new Decimal(0)
+    if(!player.annihilation.total.plus(tmp.anh.gain).gte(1e14))  player.spentEssence = new Decimal(0)
+    if(!player.annihilation.total.plus(tmp.anh.gain).gte(1e14))  player.upgsUnl = hasAnhUpg(13)
+    if(!player.annihilation.total.plus(tmp.anh.gain).gte(1e14))  player.upgs = {}
+    if(!player.annihilation.total.plus(tmp.anh.gain).gte(1e14))  layer.quarks = playerQuarksData(false)
+    if(!player.annihilation.total.plus(tmp.anh.gain).gte(1e14))   player.hadrons = playerHadronsData(false)
 
     if (!auto) {
         updateTemp();
