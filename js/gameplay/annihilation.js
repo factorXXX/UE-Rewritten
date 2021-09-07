@@ -39,7 +39,7 @@ function annihilate(force=false, auto=false) {
             if(!confirm("Are you sure you wish to do this? This will reset all previous progress!"))return;
             player.annihilation.reached = true54
         }
-        if(player.annihilation.total.plus(tmp.anh.gain).gte(1e14))  alert("Due to challenge, you can't get more than 1e14 annihilation energy.")
+        if(player.annihilation.total.plus(tmp.anh.gain).gte(1e14))  alert("Due to challenge, you can't having your Total Annihilation energy surpass 1e14.")
    if(!player.annihilation.total.plus(tmp.anh.gain).gte(1e14))     player.annihilation.energy = player.annihilation.energy.plus(tmp.anh.gain);
    if(!player.annihilation.total.plus(tmp.anh.gain).gte(1e14))      player.annihilation.total = player.annihilation.total.plus(tmp.anh.gain);
     }
